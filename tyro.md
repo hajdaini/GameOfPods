@@ -33,28 +33,6 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: myapp-pod
-  labels:
-    app: myapp
-spec:
-  containers:
-  - name: myapp-container
-    image: busybox:1.28
-    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
-  initContainers:
-  - name: copy-jekyll-site
-    image: kodekloud/jekyll
-    command: [ "jekyll", "new", "/site" ]
-    volumeMounts:
-    - mountPath: /site
-      name: site
-```
-
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
   name: jekyll
   namespace: development
   labels: 
