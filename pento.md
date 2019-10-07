@@ -37,12 +37,13 @@ metadata:
   name: gop-fs-service
 spec:
   selector:
-    app: gop-fileserver
+    app: gop-fs-service
   ports:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-  type: ClusterIP
+      nodePort: 31200
+  type: NodePort
 ```
 
 ```yaml
