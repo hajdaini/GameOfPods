@@ -1,4 +1,4 @@
-# TYRO
+# BRAVO
 
 ```shell
 ssh root@node01 "mkdir /drupal-mysql-data /drupal-data"
